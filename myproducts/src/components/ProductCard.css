@@ -1,0 +1,38 @@
+.product-card {
+    background-color: #eee;
+    border: 1px solid #555;
+    padding: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .product-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid #aaa;
+    margin-bottom: 12px;
+  }
+  
+  .product-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .product-description {
+    padding: 12px;
+    border: 1px solid #aaa;
+    background-color: #f9f9f9;
+    color: #555;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+  }
+  
