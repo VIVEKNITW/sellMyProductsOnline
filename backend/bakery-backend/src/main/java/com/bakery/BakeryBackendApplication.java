@@ -18,19 +18,34 @@ public class BakeryBackendApplication {
 	CommandLineRunner runner(ProductRepository productRepository) {
 		return args -> {
 			Product cake = new Product();
-			cake.setName("Chocolate Cake");
-			cake.setDescription("Delicious chocolate sponge cake");
-			cake.setPrice(299.0);
-			cake.setImageUrl("https://example.com/chocolate-cake.jpg");
+			cake.setName("Cake");
+			cake.setDescription("Tasty and healthy sugar free cake");
+			cake.setPrice(250.0);
+			cake.setImageUrl("/images/products/cake.jpg");
 
-			Product pastry = new Product();
-			pastry.setName("Strawberry Pastry");
-			pastry.setDescription("Fresh strawberry cream pastry");
-			pastry.setPrice(149.0);
-			pastry.setImageUrl("https://example.com/strawberry-pastry.jpg");
+			Product chocolate = new Product();
+			chocolate.setName("Chocolate");
+			chocolate.setDescription("80% dark sugar free chocolate bar");
+			chocolate.setPrice(120.0);
+			chocolate.setImageUrl("/images/products/chocolate.jpg");
+
+			Product donut = new Product();
+			donut.setName("Donut");
+			donut.setDescription("Tasty sugar free donut");
+			donut.setPrice(60.0);
+			donut.setImageUrl("/images/products/donut.jpg");
+
+			Product samosa = new Product();
+			samosa.setName("Samosa");
+			samosa.setDescription("Crispy tasty samosa");
+			samosa.setPrice(40.0);
+			samosa.setImageUrl("/images/products/samosa.jpg");
+
 
 			productRepository.save(cake);
-			productRepository.save(pastry);
+			productRepository.save(chocolate);
+			productRepository.save(donut);
+			productRepository.save(samosa);
 
 			System.out.println("✅ Sample products inserted!");
 		};
