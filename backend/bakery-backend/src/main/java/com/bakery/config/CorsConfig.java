@@ -14,9 +14,12 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:3000")
-                        .allowedMethods("*")
-                        .allowedHeaders("*");
+                        .allowedOriginPatterns("*")  // Use allowedOriginPatterns instead of allowedOrigins
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                        .allowedHeaders("*")
+                        .exposedHeaders("Authorization")
+                        .allowCredentials(false)  // Set to false when using wildcard origins
+                        .maxAge(3600);
             }
         };
     }
